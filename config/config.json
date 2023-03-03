@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "owen",
+    "password": "1234",
+    "database": "ufc_database",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "owen",
+    "password": "1234",
+    "database": "ufc_database_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "owen",
+    "password": "1234",
+    "database": "ufc_database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
