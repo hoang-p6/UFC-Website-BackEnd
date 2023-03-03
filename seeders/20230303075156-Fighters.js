@@ -14,6 +14,7 @@ module.exports = {
           draws: 0,
           birthDate: '1987-07-19',
           country: 'United States of America',
+          division: 'Heavyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -25,6 +26,7 @@ module.exports = {
           draws: 0,
           birthDate: '1990-04-12',
           country: 'France',
+          division: 'Heavyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -34,8 +36,9 @@ module.exports = {
           wins: 23,
           losses: 3,
           draws: 0,
-          birthDate: '1988',
+          birthDate: '1988-03-07',
           country: 'Krygzstan',
+          division: 'Womens Flyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -47,6 +50,7 @@ module.exports = {
           draws: 0,
           birthDate: '1993-08-09',
           country: 'Mexico',
+          division: 'Womens Flyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -58,6 +62,7 @@ module.exports = {
           draws: 0,
           birthDate: '1990-08-28',
           country: 'United States of America',
+          division: 'Welterweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -69,6 +74,7 @@ module.exports = {
           draws: 0,
           birthDate: '1994-10-23',
           country: 'Kazakhstan',
+          division: 'Welterweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -80,6 +86,7 @@ module.exports = {
           draws: 0,
           birthDate: '1990-12-11',
           country: 'Poland',
+          division: 'Lightweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -91,6 +98,7 @@ module.exports = {
           draws: 0,
           birthDate: '1995-05-18',
           country: 'United States of America',
+          division: 'Lightweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -102,6 +110,7 @@ module.exports = {
           draws: 0,
           birthDate: '1996-01-14',
           country: 'United States of America',
+          division: 'Middleweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -113,6 +122,7 @@ module.exports = {
           draws: 0,
           birthDate: '1988-08-29',
           country: 'United States of America',
+          division: 'Middleweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
