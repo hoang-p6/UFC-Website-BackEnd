@@ -24,6 +24,15 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
+    fighterId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'fighters',
+        key: 'id'
+      }
+    },
+
     division: DataTypes.STRING
   }, {
     sequelize,
