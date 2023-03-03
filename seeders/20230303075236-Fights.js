@@ -8,38 +8,38 @@ module.exports = {
       [
         {
           cardId: 1,
-          fighterId: [1, 2],
+          fighterId: 1,
           division: 'Heavyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
           cardId: 1,
-          fighterId: [3, 4],
+          fighterId: 2,
           division: 'Womens Flyweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
-        ,
+
         {
           cardId: 1,
-          fighterId: [5, 6],
+          fighterId: 2,
           division: 'Welterweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
-        ,
+
         {
           cardId: 1,
-          fighterId: [7, 8],
+          fighterId: 2,
           division: 'Lightweight',
           createdAt: new Date(),
           updatedAt: new Date()
         },
-        ,
+
         {
           cardId: 1,
-          fighterId: [9, 10],
+          fighterId: 2,
           division: 'Middleweight',
           createdAt: new Date(),
           updatedAt: new Date()
