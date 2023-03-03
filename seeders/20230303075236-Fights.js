@@ -43,7 +43,7 @@ module.exports = {
           division: 'Middleweight',
           createdAt: new Date(),
           updatedAt: new Date()
-        },
+        }
       ]
 
 

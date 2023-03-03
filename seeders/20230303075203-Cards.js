@@ -12,7 +12,9 @@ module.exports = {
           startTime: '10 PM EST',
           city: 'Paradise',
           country: 'United States of America',
-          arena: 'T-Mobile Arena'
+          arena: 'T-Mobile Arena',
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ]
     )
