@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('Fights', {
+    await queryInterface.createTable('fights', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -12,12 +12,7 @@ module.exports = {
       cardId: {
         type: Sequelize.INTEGER
       },
-      fighterOneId: {
-        type: Sequelize.INTEGER
-      },
-      fighterTwoId: {
-        type: Sequelize.INTEGER
-      },
+
       division: {
         type: Sequelize.STRING
       },
@@ -32,6 +27,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('Fights');
+    await queryInterface.dropTable('fights');
   }
 };

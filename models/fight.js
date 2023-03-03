@@ -11,12 +11,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Fight.hasMany(models.Fighter, { foreignKey: 'fightId' })
+      Fight.belongsTo(models.Card, { foreignKey: 'cardId' })
     }
   }
   Fight.init({
-    cardId: DataTypes.INTEGER,
-    fighterOneId: DataTypes.INTEGER,
-    fighterTwoId: DataTypes.INTEGER,
+    cardId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'cards',
+        key: 'id'
+      }
+    },
     division: DataTypes.STRING
   }, {
     sequelize,
