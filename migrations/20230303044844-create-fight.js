@@ -12,7 +12,9 @@ module.exports = {
       cardId: {
         type: Sequelize.INTEGER
       },
-
+      fighterId: {
+        type: Sequelize.INTEGER
+      },
       division: {
         type: Sequelize.STRING
       },
