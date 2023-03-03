@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
     fighterId: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
       onDelete: 'CASCADE',
       references: {
         model: 'fighters',
