@@ -13,7 +13,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       fighterId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.ARRAY(Sequelize.INTEGER)
       },
       division: {
         type: Sequelize.STRING
