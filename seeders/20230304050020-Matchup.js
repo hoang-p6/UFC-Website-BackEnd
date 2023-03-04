@@ -4,50 +4,39 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert(
-      'fights',
+      'matchups',
       [
         {
-          cardId: 1,
-          matchupId: 1,
-          division: 'Heavyweight',
+          fighterOneId: 1,
+          fighterTwoId: 2,
           createdAt: new Date(),
           updatedAt: new Date()
         },
         {
-          cardId: 1,
-          matchupId: 2,
-          division: 'Womens Flyweight',
+          fighterOneId: 3,
+          fighterTwoId: 4,
           createdAt: new Date(),
           updatedAt: new Date()
         },
-
         {
-          cardId: 1,
-          matchupId: 3,
-          division: 'Welterweight',
+          fighterOneId: 5,
+          fighterTwoId: 6,
           createdAt: new Date(),
           updatedAt: new Date()
         },
-
         {
-          cardId: 1,
-          matchupId: 4,
-          division: 'Lightweight',
+          fighterOneId: 7,
+          fighterTwoId: 8,
           createdAt: new Date(),
           updatedAt: new Date()
         },
-
         {
-          cardId: 1,
-          matchupId: 5,
-          division: 'Middleweight',
+          fighterOneId: 9,
+          fighterTwoId: 10,
           createdAt: new Date(),
           updatedAt: new Date()
-        }
+        },
       ]
-
-
-
     )
   },
 

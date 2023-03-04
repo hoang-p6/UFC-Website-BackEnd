@@ -3,42 +3,37 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Fight extends Model {
+  class Matchup extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      Fight.belongsTo(models.Card, { foreignKey: 'cardId' })
-
 
     }
   }
-  Fight.init({
-    cardId: {
+  Matchup.init({
+    fighterOneId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       references: {
-        model: 'cards',
+        model: 'fighters',
         key: 'id'
       }
     },
-    matchupId: {
+    fighterTwoId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       references: {
-        model: 'matchups',
+        model: 'fighters',
         key: 'id'
       }
-    },
-
-    division: DataTypes.STRING
+    }
   }, {
     sequelize,
-    modelName: 'Fight',
-    tableName: 'fights'
+    modelName: 'Matchup',
+    tableName: 'matchups'
   });
-  return Fight;
+  return Matchup;
 };
