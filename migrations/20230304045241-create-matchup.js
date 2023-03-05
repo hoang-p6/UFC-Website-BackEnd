@@ -2,21 +2,18 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('fights', {
+    await queryInterface.createTable('matchups', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      cardId: {
+      fighterOneId: {
         type: Sequelize.INTEGER
       },
-      matchupId: {
+      fighterTwoId: {
         type: Sequelize.INTEGER
-      },
-      division: {
-        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +26,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('fights');
+    await queryInterface.dropTable('matchups');
   }
 };
