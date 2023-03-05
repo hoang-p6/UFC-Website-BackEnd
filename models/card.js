@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Card.hasMany(models.Fight, { foreignKey: 'cardId' })
+
     }
   }
   Card.init({

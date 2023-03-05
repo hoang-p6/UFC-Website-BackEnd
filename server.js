@@ -2,7 +2,9 @@ const express = require('express')
 const cors = require('cors')
 const logger = require('morgan')
 const AuthRouter = require('./routes/AuthRouter')
-const CardRouter = require('./routes/CardRouter')
+const ReviewRouter = require('./routes/ReviewRouter')
+const FightsRouter = require('./routes/FightRouter')
+const FighterRouter = require('./routes/FighterRouter')
 
 const app = express()
 
@@ -14,6 +16,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.use('/auth', AuthRouter)
-app.use('/cards', CardRouter)
+app.use('/reviews', ReviewRouter)
+app.use('/fights', FightsRouter)
+app.use('/fighters', FighterRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
