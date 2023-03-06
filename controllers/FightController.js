@@ -13,7 +13,7 @@ const GetFights = async (req, res) => {
 
 const GetFightById = async (req, res) => {
   try {
-    const fight = await Fight.findAll({ attributes: ['id', 'cardId', 'matchupId', 'division'], where: { id: req.params.fight_id } })
+    const fight = await Fight.findAll({ attributes: ['id', 'cardId', 'matchupId', 'division', 'winner'], where: { id: req.params.fight_id } })
 
     res.send(fight)
   } catch (error) {
