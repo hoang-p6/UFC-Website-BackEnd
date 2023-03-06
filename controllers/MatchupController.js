@@ -10,6 +10,14 @@ const GetMatchups = async (req, res) => {
   }
 }
 
+const CreateMatchup = async (req, res) => {
+  try {
+    let newMatchup = { ...req.body }
+  } catch (error) {
+
+  }
+}
+
 
 module.exports = {
   GetMatchups
