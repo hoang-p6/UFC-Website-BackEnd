@@ -34,7 +34,8 @@ module.exports = (sequelize, DataTypes) => {
       }
     },
 
-    division: DataTypes.STRING
+    division: DataTypes.STRING,
+    winner: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Fight',
