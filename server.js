@@ -6,6 +6,7 @@ const ReviewRouter = require('./routes/ReviewRouter')
 const FightsRouter = require('./routes/FightRouter')
 const FighterRouter = require('./routes/FighterRouter')
 const MatchupRouter = require('./routes/MatchupRouter')
+const CardRouter = require('./routes/CardRouter')
 
 const app = express()
 
@@ -21,5 +22,6 @@ app.use('/reviews', ReviewRouter)
 app.use('/fights', FightsRouter)
 app.use('/fighters', FighterRouter)
 app.use('/matchups', MatchupRouter)
+app.use('/cards', CardRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))
