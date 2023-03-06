@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     startTime: DataTypes.STRING,
     city: DataTypes.STRING,
     country: DataTypes.STRING,
-    arena: DataTypes.STRING
+    arena: DataTypes.STRING,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Card',
