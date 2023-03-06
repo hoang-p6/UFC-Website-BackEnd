@@ -13,6 +13,7 @@ module.exports = {
           city: 'Paradise',
           country: 'United States of America',
           arena: 'T-Mobile Arena',
+          image: 'https://tse1.mm.bing.net/th?id=OIF.4Fwfn16gIrhy4AtWqm06FA&pid=Api&P=0',
           createdAt: new Date(),
           updatedAt: new Date()
         }
