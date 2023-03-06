@@ -14,6 +14,8 @@ module.exports = (sequelize, DataTypes) => {
       Fight.belongsTo(models.Card, { foreignKey: 'cardId' })
 
 
+
+
     }
   }
   Fight.init({

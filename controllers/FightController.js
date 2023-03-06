@@ -1,4 +1,4 @@
-const { Card, Fighter, Fight } = require('../models')
+const { Card, Fighter, Fight, Matchup } = require('../models')
 
 const GetFights = async (req, res) => {
   try {
@@ -20,6 +20,8 @@ const GetFightById = async (req, res) => {
     throw error
   }
 }
+
+
 
 const CreateFight = async (req, res) => {
   try {
@@ -59,4 +61,5 @@ module.exports = {
   CreateFight,
   UpdateFight,
   DestroyFight
+
 }
