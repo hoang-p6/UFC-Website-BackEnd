@@ -9,4 +9,5 @@ router.put('/update/:fight_id', controller.UpdateFight)
 router.delete('/delete/:fight_id', controller.DestroyFight)
 
 
+
 module.exports = router
