@@ -56,7 +56,7 @@ const verifyToken = (req, res, next) => {
       //   Calls the next function if the token is valid
       return next()
     }
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+    res.status(401).send({ status: 'Error', msg: 'Verify Unauthorized' })
   } catch (error) {
     console.log(error)
     res.status(401).send({ status: 'Error', msg: 'Verify Token Error!' })
