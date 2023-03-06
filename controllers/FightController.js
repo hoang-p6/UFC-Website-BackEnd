@@ -3,7 +3,7 @@ const { Card, Fighter, Fight } = require('../models')
 const GetFights = async (req, res) => {
   try {
     const fights = await Fight.findAll({
-      attributes: ['id', 'cardId', 'matchupId', 'division']
+      attributes: ['id', 'cardId', 'matchupId', 'division', 'winner']
     })
     res.send(fights)
   } catch (error) {
