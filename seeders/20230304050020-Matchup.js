@@ -41,6 +41,83 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
         },
+        {
+          fighterOneId: 11,
+          fighterTwoId: 12,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 13,
+          fighterTwoId: 14,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 15,
+          fighterTwoId: 16,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 17,
+          fighterTwoId: 18,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 19,
+          fighterTwoId: 20,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 21,
+          fighterTwoId: 22,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 23,
+          fighterTwoId: 24,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 25,
+          fighterTwoId: 26,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 27,
+          fighterTwoId: 28,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 29,
+          fighterTwoId: 30,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          fighterOneId: 31,
+          fighterTwoId: 32,
+
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
       ]
     )
   },

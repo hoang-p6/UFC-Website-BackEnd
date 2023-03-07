@@ -1,4 +1,4 @@
-const { Card, Fighter, Fight, Matchup } = require('../models')
+const { Card, Fighter, Fight, Matchup, Review } = require('../models')
 const { Op } = require('sequelize')
 
 const GetFights = async (req, res) => {
@@ -10,6 +10,11 @@ const GetFights = async (req, res) => {
   } catch (error) {
     throw error
   }
+}
+const GetReviewsByFightId = async (req, res) => {
+  let fightId = req.params.fight_id
+  let reviews = await Review.findAll({ attributes: ['review', 'rating'], where: { fightId: fightId } })
+  res.send(reviews)
 }
 
 const GetFightersByIdOfFight = async (req, res) => {
@@ -67,6 +72,7 @@ module.exports = {
   GetFightersByIdOfFight,
   CreateFight,
   UpdateFight,
-  DestroyFight
+  DestroyFight,
+  GetReviewsByFightId
 
 }
