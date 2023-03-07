@@ -50,7 +50,7 @@ const GetFightersByIdOfCard = async (req, res) => {
       console.log(fighterTwoId)
       console.log(fighterOneId)
       let fighters = await Fighter.findAll({
-        attributes: ['firstName', 'lastName', 'wins', 'losses', 'draws', 'birthDate', 'country'],
+        attributes: ['firstName', 'lastName', 'wins', 'losses', 'draws', 'birthDate', 'country', 'image'],
         where: {
           id: {
             [Op.or]: [fighterOneId, fighterTwoId]
