@@ -32,15 +32,18 @@ const GetFightersByIdOfCard = async (req, res) => {
     })
     for (let i = 0; i < fights.length; i++) {
 
-      fightsArray = [...fightsArray, [fights[i].matchupId]]
+      fightsArray = [...fightsArray, [fights[i].matchupId, fights[i].division, fights[i].winner]]
+      console.log(fightsArray)
 
     }
 
     for (let i = 0; i < fightsArray.length; i++) {
 
-      let matchup = await Matchup.findAll({ attributes: ['fighterOneId', 'fighterTwoId'], where: { id: fightsArray[i][0] } })
+      let matchup = await Matchup.findAll({ attributes: ['fighterOneId', 'fighterTwoId',], where: { id: fightsArray[i][0] } })
       let fighterOneId = [matchup[0].dataValues.fighterOneId][0]
       let fighterTwoId = [matchup[0].dataValues.fighterTwoId][0]
+      let division = fightsArray[i][1]
+      let winner = fightsArray[i][2]
       console.log(fighterTwoId)
       console.log(fighterOneId)
       let fighters = await Fighter.findAll({
@@ -52,7 +55,7 @@ const GetFightersByIdOfCard = async (req, res) => {
         }
       })
       console.log('hello')
-      fightersOnCard = [...fightersOnCard, fighters]
+      fightersOnCard = [...fightersOnCard, [fighters, division, winner]]
     }
     res.send({ fightersOnCard })
 
