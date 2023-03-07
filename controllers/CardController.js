@@ -85,7 +85,8 @@ const GetFightersByIdOfCard = async (req, res) => {
           'losses',
           'draws',
           'birthDate',
-          'country'
+          'country',
+          'image'
         ],
         where: {
           id: {
