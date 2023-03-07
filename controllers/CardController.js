@@ -4,14 +4,14 @@ const GetCards = async (req, res) => {
   try {
     const cards = await Card.findAll({
       attributes: [
+        'id',
         'title',
         'country',
         'date',
         'startTime',
         'city',
         'arena',
-        'image',
-        'id'
+        'image'
       ],
       include: Fight
     })
