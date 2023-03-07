@@ -4,6 +4,7 @@ const middleware = require('../middleware')
 const { route } = require('./AuthRouter')
 
 router.get('/list', controller.GetCards)
+router.get('/:card_id', controller.GetCardById)
 router.post('/create', controller.CreateCard)
 router.put('/:card_id/update', controller.UpdateCard)
 router.delete('/:card_id/delete', controller.DeleteCard)
