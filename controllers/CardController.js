@@ -10,7 +10,8 @@ const GetCards = async (req, res) => {
         'startTime',
         'city',
         'arena',
-        'image'
+        'image',
+        'id'
       ],
       include: Fight
     })
