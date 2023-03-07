@@ -15,9 +15,7 @@ module.exports = {
       fighterTwoId: {
         type: Sequelize.INTEGER
       },
-      fightId: {
-        type: Sequelize.INTEGER
-      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
