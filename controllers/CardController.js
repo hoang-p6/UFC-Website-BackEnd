@@ -9,6 +9,16 @@ const GetCards = async (req, res) => {
 
   }
 }
+
+const GetCardById = async (req, res) => {
+  try {
+    let id = req.params.card_id
+    const card = await Card.findAll({ attributes: ['id', 'title', 'country', 'date', 'startTime', 'city', 'arena', 'image'], where: { id: id } })
+    res.send(card)
+  } catch (error) {
+
+  }
+}
 const CreateCard = async (req, res) => {
   try {
     let newCard = { ...req.body }
@@ -45,5 +55,6 @@ module.exports = {
   GetCards,
   CreateCard,
   UpdateCard,
-  DeleteCard
+  DeleteCard,
+  GetCardById
 }

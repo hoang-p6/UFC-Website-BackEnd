@@ -21,7 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     draws: DataTypes.INTEGER,
     birthDate: DataTypes.DATE,
     country: DataTypes.STRING,
-    division: DataTypes.STRING
+    division: DataTypes.STRING,
+    image: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Fighter',
