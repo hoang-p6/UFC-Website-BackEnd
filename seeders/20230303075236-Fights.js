@@ -48,7 +48,96 @@ module.exports = {
           winner: "Bo Nickal",
           createdAt: new Date(),
           updatedAt: new Date()
-        }
+        },
+        {
+          cardId: 2,
+          matchupId: 6,
+          division: 'Bantamweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 2,
+          matchupId: 7,
+          division: 'Heavyweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 2,
+          matchupId: 8,
+          division: 'Catch Weight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 2,
+          matchupId: 9,
+          division: 'Featherweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 2,
+          matchupId: 10,
+          division: 'Bantamweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 2,
+          matchupId: 11,
+          division: 'Light Heavyweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 3,
+          matchupId: 12,
+          division: 'Welterweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 3,
+          matchupId: 13,
+          division: 'Lightweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 3,
+          matchupId: 14,
+          division: 'Womens Flyweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 3,
+          matchupId: 15,
+          division: 'Welterweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          cardId: 3,
+          matchupId: 16,
+          division: 'Middleweight',
+          winner: "TBD",
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+
       ]
 
 
