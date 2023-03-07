@@ -1,4 +1,5 @@
 const { Card, Fighter, Fight, Matchup } = require('../models')
+const { Op } = require('sequelize')
 
 const GetCards = async (req, res) => {
   try {
@@ -39,6 +40,50 @@ const GetCardById = async (req, res) => {
   } catch (error) {}
 }
 
+const GetFightersByIdOfCard = async (req, res) => {
+  try {
+    const cardId = req.params.card_id
+    let fightsArray = []
+    let fightersOnCard = []
+    const fights = await Fight.findAll({
+      attributes: ['id', 'cardId', 'matchupId', 'division', 'winner'],
+      where: { cardId: cardId }
+    })
+    for (let i = 0; i < fights.length; i++) {
+      fightsArray = [...fightsArray, [fights[i].matchupId]]
+    }
+
+    for (let i = 0; i < fightsArray.length; i++) {
+      let matchup = await Matchup.findAll({
+        attributes: ['fighterOneId', 'fighterTwoId'],
+        where: { id: fightsArray[i][0] }
+      })
+      let fighterOneId = [matchup[0].dataValues.fighterOneId][0]
+      let fighterTwoId = [matchup[0].dataValues.fighterTwoId][0]
+      console.log(fighterTwoId)
+      console.log(fighterOneId)
+      let fighters = await Fighter.findAll({
+        attributes: [
+          'firstName',
+          'lastName',
+          'wins',
+          'losses',
+          'draws',
+          'birthDate',
+          'country'
+        ],
+        where: {
+          id: {
+            [Op.or]: [fighterOneId, fighterTwoId]
+          }
+        }
+      })
+      console.log('hello')
+      fightersOnCard = [...fightersOnCard, fighters]
+    }
+    res.send({ fightersOnCard })
+  } catch (error) {}
+}
 const CreateCard = async (req, res) => {
   try {
     let newCard = { ...req.body }
@@ -69,5 +114,6 @@ module.exports = {
   CreateCard,
   UpdateCard,
   DeleteCard,
-  GetCardById
+  GetCardById,
+  GetFightersByIdOfCard
 }
