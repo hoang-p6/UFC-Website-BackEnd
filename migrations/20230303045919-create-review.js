@@ -15,6 +15,9 @@ module.exports = {
       fightId: {
         type: Sequelize.INTEGER
       },
+      userName: {
+        type: Sequelize.STRING
+      },
       review: {
         type: Sequelize.STRING
       },

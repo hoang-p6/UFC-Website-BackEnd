@@ -10,6 +10,7 @@ module.exports = {
           userId: 1,
           fightId: 1,
           rating: 5,
+          userName: 'odon',
           review: 'That was dope',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -18,6 +19,7 @@ module.exports = {
           userId: 1,
           fightId: 1,
           rating: 5,
+          userName: 'odon',
           review: 'That was double dope',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -26,6 +28,7 @@ module.exports = {
           userId: 1,
           fightId: 2,
           rating: 5,
+          userName: 'odon',
           review: 'That was super dope',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -34,6 +37,7 @@ module.exports = {
           userId: 1,
           fightId: 2,
           rating: 5,
+          userName: 'odon',
           review: 'That was mega dope',
           createdAt: new Date(),
           updatedAt: new Date()
