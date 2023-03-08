@@ -14,19 +14,44 @@ const GetFights = async (req, res) => {
 const GetReviewsByFightId = async (req, res) => {
   const fightId = parseInt(req.params.fight_id)
   console.log(fightId)
-  let reviews = await Review.findAll({ attributes: ['review', 'rating'], where: { fightId: fightId } })
+  let reviews = await Review.findAll({
+    attributes: ['review', 'rating'],
+    where: { fightId: fightId }
+  })
   res.send(reviews)
 }
-
+const AddReviewsByFightId = async (req, res) => {
+  const fightId = parseInt(req.params.fight_id)
+  console.log(fightId)
+  let reviews = await Review.create({ ...req.body })
+  res.send(reviews)
+}
 const GetFightersByIdOfFight = async (req, res) => {
   try {
-    const fight = await Fight.findAll({ attributes: ['id', 'cardId', 'matchupId', 'division', 'winner'], where: { id: req.params.fight_id } })
+    const fight = await Fight.findAll({
+      attributes: ['id', 'cardId', 'matchupId', 'division', 'winner'],
+      where: { id: req.params.fight_id }
+    })
     let matchId = fight[0].matchupId
     let findMatch = [matchId]
-    const matchup = await Matchup.findAll({ attributes: ['fighterOneId', 'fighterTwoId'], where: { id: findMatch } })
+    const matchup = await Matchup.findAll({
+      attributes: ['fighterOneId', 'fighterTwoId'],
+      where: { id: findMatch }
+    })
     let fighterOne = [matchup[0].fighterOneId]
     let fighterTwo = [matchup[0].fighterTwoId]
-    const fighters = await Fighter.findAll({ attributes: ['firstName', 'lastName', 'wins', 'losses', 'draws', 'birthDate', 'country'], where: { id: { [Op.or]: [fighterOne, fighterTwo] } } })
+    const fighters = await Fighter.findAll({
+      attributes: [
+        'firstName',
+        'lastName',
+        'wins',
+        'losses',
+        'draws',
+        'birthDate',
+        'country'
+      ],
+      where: { id: { [Op.or]: [fighterOne, fighterTwo] } }
+    })
 
     res.send(fighters)
   } catch (error) {
@@ -34,16 +59,12 @@ const GetFightersByIdOfFight = async (req, res) => {
   }
 }
 
-
-
 const CreateFight = async (req, res) => {
   try {
     let newFight = { ...req.body }
     let fight = await Fight.create(newFight)
     res.send(fight)
-  } catch (error) {
-
-  }
+  } catch (error) {}
 }
 const UpdateFight = async (req, res) => {
   try {
@@ -53,9 +74,7 @@ const UpdateFight = async (req, res) => {
       returning: true
     })
     res.send(updated_fight)
-  } catch (error) {
-
-  }
+  } catch (error) {}
 }
 
 const DestroyFight = async (req, res) => {
@@ -63,9 +82,7 @@ const DestroyFight = async (req, res) => {
     let fightId = parseInt(req.params.fight_id)
     await Fight.destroy({ where: { id: fightId } })
     res.send({ message: `Deleted Fight with an Id of ${fightId}` })
-  } catch (error) {
-
-  }
+  } catch (error) {}
 }
 
 module.exports = {
@@ -74,6 +91,6 @@ module.exports = {
   CreateFight,
   UpdateFight,
   DestroyFight,
-  GetReviewsByFightId
-
+  GetReviewsByFightId,
+  AddReviewsByFightId
 }
