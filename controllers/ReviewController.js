@@ -12,8 +12,9 @@ const GetReviews = async (req, res) => {
 
 const CreateReview = async (req, res) => {
   try {
-    const review = await Review.create({ ...req.body })
-    res.send(review)
+
+    let reviews = await Review.create({ ...req.body })
+    res.send(reviews)
   } catch (error) {
     throw error
   }
@@ -33,9 +34,11 @@ const UpdateReview = async (req, res) => {
 
 const DeleteReview = async (req, res) => {
   try {
+
     await Review.destroy({ where: { id: req.params.review_id } })
     res.send({ msg: 'review Deleted', payload: req.params.review_id, status: 'Ok' })
   } catch (error) {
+
     throw error
   }
 }
