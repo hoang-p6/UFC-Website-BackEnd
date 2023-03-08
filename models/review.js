@@ -33,6 +33,7 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
+    userName: DataTypes.STRING,
     review: DataTypes.STRING,
     rating: DataTypes.INTEGER
   }, {
