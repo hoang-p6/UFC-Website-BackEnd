@@ -30,6 +30,7 @@ const createToken = (payload) => {
 
 const stripToken = (req, res, next) => {
   try {
+    console.log(req.headers)
     const token = req.headers['authorization'].split(' ')[1]
     // Gets the token from the request headers {authorization: Bearer Some-Token}
     // Splits the value of the authorization header
@@ -38,7 +39,7 @@ const stripToken = (req, res, next) => {
       //   If the token exists we add it to the request lifecycle state
       return next()
     }
-    res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
+    res.status(401).send({ status: 'Error', msg: 'Strip Unauthorized' })
   } catch (error) {
     console.log(error)
     res.status(401).send({ status: 'Error', msg: 'Strip Token Error!' })

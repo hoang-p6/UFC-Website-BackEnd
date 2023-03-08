@@ -16,7 +16,7 @@ router.put(
   controller.UpdateReview
 )
 router.delete(
-  '/:review_id',
+  '/:review_id/delete',
   middleware.stripToken,
   middleware.verifyToken,
   controller.DeleteReview
