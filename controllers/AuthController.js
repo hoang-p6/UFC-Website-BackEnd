@@ -16,6 +16,19 @@ const Register = async (req, res) => {
   }
 }
 
+const FindUserById = async (req, res) => {
+  try {
+    console.log('hello')
+    const userId = req.params.user_id
+    const user = await User.findOne({
+      where: { id: userId }
+    })
+    res.send(user)
+  } catch (error) {
+
+  }
+}
+
 const Login = async (req, res) => {
   try {
     // Extracts the necessary fields from the request body
@@ -84,5 +97,6 @@ module.exports = {
   Register,
   Login,
   UpdatePassword,
-  CheckSession
+  CheckSession,
+  FindUserById
 }
