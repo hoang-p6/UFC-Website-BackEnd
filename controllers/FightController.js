@@ -13,7 +13,7 @@ const GetFights = async (req, res) => {
 }
 const GetReviewsByFightId = async (req, res) => {
   const fightId = parseInt(req.params.fight_id)
-  console.log(fightId)
+
   let reviews = await Review.findAll({
     attributes: ['review', 'rating', 'userName', 'id'],
     where: { fightId: fightId }
