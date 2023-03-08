@@ -15,17 +15,17 @@ const GetReviewsByFightId = async (req, res) => {
   const fightId = parseInt(req.params.fight_id)
   console.log(fightId)
   let reviews = await Review.findAll({
-    attributes: ['review', 'rating'],
+    attributes: ['review', 'rating', 'userName', 'id'],
     where: { fightId: fightId }
   })
   res.send(reviews)
 }
-const AddReviewsByFightId = async (req, res) => {
-  const fightId = parseInt(req.params.fight_id)
-  console.log(fightId)
-  let reviews = await Review.create({ ...req.body })
-  res.send(reviews)
-}
+// const AddReviewsByFightId = async (req, res) => {
+//   const fightId = parseInt(req.params.fight_id)
+//   console.log(fightId)
+//   let reviews = await Review.create({ ...req.body })
+//   res.send(reviews)
+// }
 const GetFightersByIdOfFight = async (req, res) => {
   try {
     const fight = await Fight.findAll({
@@ -64,7 +64,7 @@ const CreateFight = async (req, res) => {
     let newFight = { ...req.body }
     let fight = await Fight.create(newFight)
     res.send(fight)
-  } catch (error) {}
+  } catch (error) { }
 }
 const UpdateFight = async (req, res) => {
   try {
@@ -74,7 +74,7 @@ const UpdateFight = async (req, res) => {
       returning: true
     })
     res.send(updated_fight)
-  } catch (error) {}
+  } catch (error) { }
 }
 
 const DestroyFight = async (req, res) => {
@@ -82,7 +82,7 @@ const DestroyFight = async (req, res) => {
     let fightId = parseInt(req.params.fight_id)
     await Fight.destroy({ where: { id: fightId } })
     res.send({ message: `Deleted Fight with an Id of ${fightId}` })
-  } catch (error) {}
+  } catch (error) { }
 }
 
 module.exports = {
@@ -91,6 +91,5 @@ module.exports = {
   CreateFight,
   UpdateFight,
   DestroyFight,
-  GetReviewsByFightId,
-  AddReviewsByFightId
+  GetReviewsByFightId
 }
