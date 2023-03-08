@@ -18,7 +18,7 @@ const Register = async (req, res) => {
 
 const FindUserById = async (req, res) => {
   try {
-    console.log('hello')
+
     const userId = req.params.user_id
     const user = await User.findOne({
       where: { id: userId }
