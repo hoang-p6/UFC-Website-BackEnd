@@ -17,7 +17,7 @@ const GetCards = async (req, res) => {
       include: Fight
     })
     res.send(cards)
-  } catch (error) {}
+  } catch (error) { }
 }
 
 const GetCardById = async (req, res) => {
@@ -37,7 +37,7 @@ const GetCardById = async (req, res) => {
       where: { id: id }
     })
     res.send(card)
-  } catch (error) {}
+  } catch (error) { }
 }
 
 const GetFightersByIdOfCard = async (req, res) => {
@@ -60,7 +60,7 @@ const GetFightersByIdOfCard = async (req, res) => {
           fights[i].cardId
         ]
       ]
-      console.log(fightsArray)
+
     }
 
     for (let i = 0; i < fightsArray.length; i++) {
@@ -75,8 +75,7 @@ const GetFightersByIdOfCard = async (req, res) => {
       let fightId = fightsArray[i][3]
       let cardId = fightsArray[i][4]
 
-      console.log(fighterTwoId)
-      console.log(fighterOneId)
+
       let fighters = await Fighter.findAll({
         attributes: [
           'firstName',
@@ -94,21 +93,21 @@ const GetFightersByIdOfCard = async (req, res) => {
           }
         }
       })
-      console.log('hello')
+
       fightersOnCard = [
         ...fightersOnCard,
         [fighters, division, winner, fightId, cardId]
       ]
     }
     res.send({ fightersOnCard })
-  } catch (error) {}
+  } catch (error) { }
 }
 const CreateCard = async (req, res) => {
   try {
     let newCard = { ...req.body }
     const card = await Card.create(newCard)
     res.send(card)
-  } catch (error) {}
+  } catch (error) { }
 }
 const UpdateCard = async (req, res) => {
   try {
@@ -118,14 +117,14 @@ const UpdateCard = async (req, res) => {
       returning: true
     })
     res.send(updatedCard)
-  } catch (error) {}
+  } catch (error) { }
 }
 const DeleteCard = async (req, res) => {
   try {
     let cardId = req.params.card_id
     await Card.destroy({ where: { id: cardId } })
     res.send({ message: `Deleted Card with an Id of ${cardId}` })
-  } catch (error) {}
+  } catch (error) { }
 }
 
 module.exports = {
