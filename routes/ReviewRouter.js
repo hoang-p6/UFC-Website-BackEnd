@@ -5,7 +5,8 @@ const middleware = require('../middleware')
 router.get('/', controller.GetReviews)
 router.post(
   '/:fight_id/addreview',
-
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.CreateReview
 )
 router.put(
@@ -16,8 +17,8 @@ router.put(
 )
 router.delete(
   '/:review_id/delete',
-  // middleware.stripToken,
-  // middleware.verifyToken,
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.DeleteReview
 )
 
