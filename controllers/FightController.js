@@ -48,7 +48,8 @@ const GetFightersByIdOfFight = async (req, res) => {
         'losses',
         'draws',
         'birthDate',
-        'country'
+        'country',
+        'image'
       ],
       where: { id: { [Op.or]: [fighterOne, fighterTwo] } }
     })
