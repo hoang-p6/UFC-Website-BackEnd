@@ -49,13 +49,15 @@ const GetFightersByIdOfCard = async (req, res) => {
       attributes: ['id', 'cardId', 'matchupId', 'division', 'winner'],
       where: { cardId: cardId }
     })
+    console.log(fights)
     for (let i = 0; i < fights.length; i++) {
+
       fightsArray = [
         ...fightsArray,
         [
           fights[i].matchupId,
           fights[i].division,
-          fights[i].winner,
+          fights[i].dataValues.winner,
           fights[i].id,
           fights[i].cardId
         ]
@@ -74,6 +76,7 @@ const GetFightersByIdOfCard = async (req, res) => {
       let winner = fightsArray[i][2]
       let fightId = fightsArray[i][3]
       let cardId = fightsArray[i][4]
+      console.log(fightsArray)
 
 
       let fighters = await Fighter.findAll({

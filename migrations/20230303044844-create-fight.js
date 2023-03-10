@@ -22,7 +22,6 @@ module.exports = {
         type: Sequelize.STRING
       },
       winner: {
-        allowNull: true,
         type: Sequelize.STRING
       },
       createdAt: {

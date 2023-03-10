@@ -15,7 +15,7 @@ module.exports = {
           birthDate: '1987-07-19',
           country: 'United States of America',
           division: 'Heavyweight',
-          image: 'https://tse2.mm.bing.net/th?id=OIP.W71taF7lElnExLB62feCJAHaJ4&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/JONES_JON_BELT_03_04.png?itok=6m9Ow949',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -28,7 +28,7 @@ module.exports = {
           birthDate: '1990-04-12',
           country: 'France',
           division: 'Heavyweight',
-          image: 'https://tse3.explicit.bing.net/th?id=OIF.JNplmuYkJsp%2fDiqW08BIAA&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/GANE_CIRYL_03-05.png?itok=kq0vVlPf',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -41,7 +41,7 @@ module.exports = {
           birthDate: '1988-03-07',
           country: 'Krygzstan',
           division: 'Womens Flyweight',
-          image: 'https://tse3.mm.bing.net/th?id=OIP.jwFfD6Us38THDEbhf4197QHaJ4&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/SHEVCHENKO_VALENTINA_03_4.png?itok=_cFyGErY',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -54,7 +54,7 @@ module.exports = {
           birthDate: '1993-08-09',
           country: 'Mexico',
           division: 'Womens Flyweight',
-          image: 'https://tse3.mm.bing.net/th?id=OIP.75agOPHD05Lc7WV6TuE4BwAAAA&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/GRASSO_ALEXA_BELTMOCK.png?itok=lSdyJgag',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -67,7 +67,7 @@ module.exports = {
           birthDate: '1990-08-28',
           country: 'United States of America',
           division: 'Welterweight',
-          image: 'https://tse4.mm.bing.net/th?id=OIF.Lsh0JtWO1dGOTLmG06%2bZww&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/NEAL_GEOFF_03-05.png?itok=Ot0dQyQa',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -80,7 +80,7 @@ module.exports = {
           birthDate: '1994-10-23',
           country: 'Kazakhstan',
           division: 'Welterweight',
-          image: 'https://tse1.mm.bing.net/th?id=OIP.b4Y8h0RgI7LSBliCgFT9DAHaJA&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/RAKHMONOV_SHAVKHAT_03-05.png?itok=r_banJ3c',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -93,7 +93,7 @@ module.exports = {
           birthDate: '1990-12-11',
           country: 'Poland',
           division: 'Lightweight',
-          image: 'https://tse4.mm.bing.net/th?id=OIF.CEfm5iJscDKSPvDPI37Kaw&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/GAMROT_MATEUSZ_03-05.png?itok=JtdjsO1B',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -106,7 +106,7 @@ module.exports = {
           birthDate: '1995-05-18',
           country: 'United States of America',
           division: 'Lightweight',
-          image: 'https://tse2.mm.bing.net/th?id=OIP.Twj1ECP7yVYMXny85scy7gHaHa&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/TURNER_JALIN_03-05.png?itok=ra435Qhz',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -119,7 +119,7 @@ module.exports = {
           birthDate: '1996-01-14',
           country: 'United States of America',
           division: 'Middleweight',
-          image: 'https://tse3.mm.bing.net/th?id=OIF.lTE5V0Rjh0oNfqxfoUPmzA&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/NICKAL_BO_03-05.png?itok=GoFjTUjv',
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -132,7 +132,7 @@ module.exports = {
           birthDate: '1988-08-29',
           country: 'United States of America',
           division: 'Middleweight',
-          image: 'https://tse2.mm.bing.net/th?id=OIF.LzigJZW4cLvp%2bTXzJa%2fhmA&pid=Api&P=0',
+          image: 'https://dmxg5wxfqgb4u.cloudfront.net/styles/event_results_athlete_headshot/s3/2023-03/PICKETT_JAMIE_03-05.png?itok=KZ5wGIHD',
           createdAt: new Date(),
           updatedAt: new Date()
         },
