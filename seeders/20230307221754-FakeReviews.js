@@ -10,7 +10,7 @@ module.exports = {
           userId: 1,
           fightId: 1,
           rating: 5,
-          userName: 'odon',
+          userName: 'Bill12',
           review: 'That was dope',
           createdAt: new Date(),
           updatedAt: new Date()
@@ -19,7 +19,7 @@ module.exports = {
           userId: 1,
           fightId: 1,
           rating: 5,
-          userName: 'odon',
+          userName: 'CarlJ',
           review: 'That was double dope',
           createdAt: new Date(),
           updatedAt: new Date()
