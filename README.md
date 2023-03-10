@@ -28,6 +28,10 @@
 
 ## **_Screenshots_**
 
+![Imgur](https://i.imgur.com/u6AWSTs.png)
+![Imgur](https://i.imgur.com/Xq6Cy8S.png)
+![Imgur](https://i.imgur.com/lvo4PkE.png)
+
 ## **_Updates_**
 
 - [ ] Add employees
