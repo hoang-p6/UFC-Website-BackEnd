@@ -9,7 +9,7 @@ const env = process.env.NODE_ENV || 'development'
 // const config = require(__dirname + '/../config/config.json')[env];
 //path.join constructs correct path regardless of directory seperator
 // go up one level from models and go to config directory to find config.json
-const config = require(path.join(__dirname, '..', 'config.json'))[env]
+const config = require(path.join(__dirname, '..', 'config', 'config.json'))[env]
 const db = {}
 
 let sequelize
